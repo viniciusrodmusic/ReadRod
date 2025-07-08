@@ -34,21 +34,17 @@ body {
 }
 
 header {
-    padding: 10px 5px 0px 5px;
+    padding: 10px 10px 0px 10px;
     display: flex;
     height: 10vh;
 }
 
-.div-languages {
-    flex-grow: 1;
-
-}
 
 .div-nav-main-page {
     display: flex;
     justify-content: center;
     flex-grow: 2;
-
+    
 }
 
 .nav-main-page {
@@ -62,3 +58,63 @@ header {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     border-bottom: 1px solid var(--azul-claro);   
 }
+
+
+
+.nav-texts {
+    transition: all 0.2s;
+}
+
+#livros:hover {
+    scale: 1.2;
+    text-shadow: 
+        0px 0px 30px var(--azul-claro),
+        0px 0px 30px var(--azul-claro);
+    color: #FFDEA8;
+
+}
+
+#textos:hover {
+    scale: 1.2;
+       text-shadow: 
+        0px 0px 30px var(--azul-claro),
+        0px 0px 30px var(--azul-claro);
+    color: #FFDEA8;
+
+    
+}
+
+#autor:hover {
+    scale: 1.2;
+       text-shadow: 
+        0px 0px 30px var(--azul-claro),
+        0px 0px 30px var(--azul-claro);
+    color: #FFDEA8;
+}
+
+
+
+
+
+
+
+.div-languages {
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    align-items: center;
+    gap: 5px;
+    flex-grow: 1;
+
+}
+
+.div-languages img:first-child {
+    height: 20px;
+    cursor: pointer;
+}
+
+.div-languages img:nth-child(2) {
+    height: 12px;
+    cursor: pointer;
+}
+
