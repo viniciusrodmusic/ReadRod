@@ -34,6 +34,8 @@ body {
 }
 
 header {
+    width: 100vw;
+    display: flex;
     padding: 10px 10px 0px 10px;
     display: flex;
     height: 10vh;
@@ -67,18 +69,14 @@ header {
 
 #livros:hover {
     scale: 1.2;
-    text-shadow: 
-        0px 0px 30px var(--azul-claro),
-        0px 0px 30px var(--azul-claro);
+    text-shadow: 0px 0px 30px var(--azul-claro);
     color: #FFDEA8;
 
 }
 
 #textos:hover {
     scale: 1.2;
-       text-shadow: 
-        0px 0px 30px var(--azul-claro),
-        0px 0px 30px var(--azul-claro);
+    text-shadow: 0px 0px 30px var(--azul-claro);
     color: #FFDEA8;
 
     
@@ -86,9 +84,7 @@ header {
 
 #autor:hover {
     scale: 1.2;
-       text-shadow: 
-        0px 0px 30px var(--azul-claro),
-        0px 0px 30px var(--azul-claro);
+    text-shadow: 0px 0px 30px var(--azul-claro);
     color: #FFDEA8;
 }
 
@@ -118,3 +114,30 @@ header {
     cursor: pointer;
 }
 
+
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+
+.div-main-page {
+    height: 90vh;
+    width: 100%;
+
+}
+
+#livros-title {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: var(--azul-claro);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
