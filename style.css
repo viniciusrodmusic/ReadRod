@@ -20,31 +20,45 @@ body {
     --amarelo-claro: #FFDEA8;
 }
 
-#titulo {
+/* #titulo {
     color: var(--azul-claro);
     font-family: "Roboto Serif" serif, sans-serif;
     font-weight: 100;
     font-size: 2.5rem;
+} */
+
+#titulo {
+    height: 100%;
+    width: 20%;;
+    background-color: red;
+    object-fit: cover;
+    object-position: center 30%;
+  
 }
-.div-titulo {
+
+/* .div-titulo {
     display: flex;
     align-items: center;
     flex: 1;
     padding-left: 10px;
-}
+    background-color: red;
+    overflow: hidden;
+
+} */
 
 header {
     width: 100vw;
     display: flex;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px 0px 30px;
     display: flex;
     height: 10vh;
+
 }
 
 
 .div-nav-main-page {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-grow: 2;
     
 }
@@ -59,6 +73,7 @@ header {
     font-size: 1.2rem;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     border-bottom: 1px solid var(--azul-claro);   
+    
 }
 
 
