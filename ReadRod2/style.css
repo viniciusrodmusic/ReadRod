@@ -43,6 +43,30 @@ header {
 
 }
 
+/* READROD LOGO */
+.div-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    
+}
+
+
+#titulo {
+    width: 10rem;
+    max-width: 100%;
+    
+}
+
+
+
+
+
+
+
+
+/* NAVBAR */
 .div-nav-main-page {
     display: flex;
     justify-content: center;
@@ -60,21 +84,37 @@ header {
 
 }
 
-.div-titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    
+
+#livros, #textos, #autor {
+    transition: all 0.3s;
+}
+
+#livros:hover {
+    color: var(--amarelo-claro);
+    scale: 1.2;
+}
+
+#textos:hover {
+    color: var(--amarelo-claro);
+    scale: 1.2;
+}
+
+#autor:hover {
+    color: var(--amarelo-claro);
+    scale: 1.2;
 }
 
 
-#titulo {
-    width: 10rem;
-    max-width: 100%;
 
 
-}
+
+
+
+
+
+
+
+/* LANGUAGES: PORTUGUESE/SPANISH */
 .div-languages {
     display: flex;
     gap: 5px;
@@ -88,4 +128,77 @@ header {
 
 #portugues {
     height: 1.5rem;
+}
+
+
+
+
+
+
+/* FIRST SECTION: LIVROS */
+.section-livros {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    height: 90vh;
+    overflow: hidden;
+    
+    
+}
+
+.div-livros-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--azul-claro);
+}
+
+
+
+/* SYNOPSIS */
+.div-showing-books {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    outline: 1px solid blue;
+
+
+}
+
+
+.book-sinopse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    border: 2px solid green;
+}
+
+.paragraph, .book-name {
+    width: 80%;
+}
+
+.book-name {
+    color: var(--azul-claro);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+/* BOOK COVERS */
+.book-images {
+    width: 40%;
+    border: 2px solid pink;
+
 }
