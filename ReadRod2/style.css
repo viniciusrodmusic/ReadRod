@@ -136,7 +136,32 @@ header {
 
 
 /* FIRST SECTION: LIVROS */
+
+.see-books-button {
+    z-index: 1;
+    font-size: 2rem;
+    color: var(--azul-claro);
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+#next-book-button {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#previous-book-button {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+
 .section-livros {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-top: 30px;
@@ -226,4 +251,5 @@ header {
 
 .covers {
     box-shadow: -10px 10px 10px var(--cinza-azulado-escuro);
+    cursor: pointer;
 }
