@@ -1,289 +1,226 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    background-image: linear-gradient( var(--cinza-azulado-escuro), var(--cinza-azulado-claro));
-    color: white;    
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    var(--cinza-azulado-escuro),
+    var(--cinza-azulado-claro)
+  );
+  color: white;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 :root {
-    --cinza-azulado-claro: #172536;
-    --cinza-azulado-escuro: #030911;
-    --azul-claro: #B7D6FF;
-    --amarelo-claro: #FFDEA8;
+  --cinza-azulado-claro: #172536;
+  --cinza-azulado-escuro: #030911;
+  --azul-claro: #b7d6ff;
+  --amarelo-claro: #ffdea8;
 }
-
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-
-
-
 header {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-auto-rows: 10vh;
-    overflow: hidden;
-    align-items: center;
-    justify-items: center;
-    background-color: var(--cinza-azulado-claro);
-    color: var(--azul-claro);
-
-
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: 10vh;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--cinza-azulado-claro);
+  color: var(--azul-claro);
 }
 
 /* READROD LOGO */
 .div-titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
 }
-
 
 #titulo {
-    width: 10rem;
-    max-width: 100%;
-    
+  width: 10rem;
+  max-width: 100%;
 }
-
-
-
-
-
-
-
 
 /* NAVBAR */
 .div-nav-main-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 100%;
-    width: 100%;
-    border-bottom: 1px solid var(--azul-claro);
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--azul-claro);
 }
 
 .nav-main-page {
-    font-size: 1.2rem;
-    display: flex;
-    gap: 40px;
-
+  font-size: 1.2rem;
+  display: flex;
+  gap: 40px;
 }
 
-
-#livros, #textos, #autor {
-    transition: all 0.3s;
+#livros,
+#textos,
+#autor {
+  transition: all 0.3s;
 }
 
 #livros:hover {
-    color: var(--amarelo-claro);
-    scale: 1.2;
+  color: var(--amarelo-claro);
+  scale: 1.2;
 }
 
 #textos:hover {
-    color: var(--amarelo-claro);
-    scale: 1.2;
+  color: var(--amarelo-claro);
+  scale: 1.2;
 }
 
 #autor:hover {
-    color: var(--amarelo-claro);
-    scale: 1.2;
+  color: var(--amarelo-claro);
+  scale: 1.2;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* LANGUAGES: PORTUGUESE/SPANISH */
 .div-languages {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 #espanhol {
-    height: 1rem;
+  height: 1rem;
 }
 
 #portugues {
-    height: 1.5rem;
+  height: 1.5rem;
 }
-
-
-
-
-
 
 /* FIRST SECTION: LIVROS */
 
 .see-books-button {
-    z-index: 1;
-    font-size: 2rem;
-    color: var(--azul-claro);
-    opacity: 0.2;
-    cursor: pointer;
+  z-index: 1;
+  font-size: 2rem;
+  color: var(--azul-claro);
+  opacity: 0.2;
+  cursor: pointer;
 }
 
 #next-book-button {
-    position: absolute;
-    right: 7px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #previous-book-button {
-    position: absolute;
-    left: 7px;
-    top: 50%;
-    transform: translateY(-50%) scaleX(-1);
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
 }
 
+.disable {
+    display: none!important;
+}
 
 .section-livros {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    height: 90vh;
-    overflow: hidden;
-    
-    
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  height: 90vh;
+  overflow: hidden;
 }
 
 .div-livros-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--azul-claro);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--azul-claro);
 }
-
-
 
 /* SYNOPSIS */
 .div-showing-books {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-
-
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
-
 
 .book-sinopse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 60%;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 60%;
 }
 
-.paragraph, .book-name {
-    width: 80%;
+.paragraph,
+.book-name {
+  width: 80%;
 }
 
 .book-name {
-    color: var(--azul-claro);
-    font-size: 2rem;
-    font-weight: 400;
+  color: var(--azul-claro);
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .paragraph {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
-
-
-
-
-
-
-
-
 
 /* BOOK COVERS */
 .book-images {
-    padding-right: 20px;
-    gap: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 40%;
-
-
+  position: relative;
+  padding-right: 20px;
+  gap: 50px;
+  display: flex;
+  /* align-items: center;
+  justify-content: start; */
+  width: 40%;
 }
 
-
-.previous-book {
+/* .previous-book {
     height: 20rem;
     animation: move-to-left 0.2s ease-out forwards;
-}
+} */
 
 .selected-book {
-    height: 30rem!important;
-    transition: all 0.2s;
-    opacity: 1!important;
-    
+  position: absolute;
+  top: 50%!important;
+  transform: translate(0, -50%) !important;
+  opacity: 1 !important;
+  z-index: 1;
+  height: 30rem;
+  transition: all 0.4s;
 }
 
 .selected-book:hover {
-    scale: 0.95;
-    outline: 1px solid white;
+  scale: 0.95;
+  outline: 1px solid white;
 }
-
-/* .second-book {
-    height: 10rem;
-    opacity: 0.2;
-} */
-
-
-
 
 .covers {
-    height: 20rem;
-    opacity: 0;
-    box-shadow: -10px 10px 10px var(--cinza-azulado-escuro);
-    cursor: pointer;
-}
+  position: absolute;
+  top: 60%;
+  transform: translate(0, -50%);
+  opacity: 0;
 
-@keyframes move-to-left {
-
-    from {
-        transform: translate();
-        opacity: 1;
-
-
-    }
-
-
-    to {
-        height: 20rem;
-        transform: translateX(-200%);
-        display: none;
-        opacity: 0;
-    }
-
+  height: 20rem;
+  box-shadow: -10px 10px 10px var(--cinza-azulado-escuro);
+  cursor: pointer;
 }
