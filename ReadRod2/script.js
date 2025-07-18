@@ -23,6 +23,23 @@ let selectedBookNumber = 1 // A PÁGINA INICIA SELECIONANDO O LIVRO 1
 
 
 
+    /* BOTÕES PARA PASSAR O LIVRO: ESQUERDA E DIREITA */
+    
+previousBookButton.addEventListener('click', () => {
+// AO CLICAR NO BOTÃO DA ESQUERDA:
+ 
+// SE O NÚMERO DO LIVRO SELECIONADO FOR MAIOR QUE 1 (Ou seja algum livro depois do primeiro):
+if (selectedBookNumber > 1) {
+    // REMOVER 1 UNIDADE AO selectedBookNumber
+    selectedBookNumber--
+    console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
+    // CHAMAR A FUNÇÃO
+    changeBook(bookCovers)
+    buttonHidden()
+}
+
+})
+
 
 
 nextBookButton.addEventListener('click', () => {
@@ -38,43 +55,14 @@ nextBookButton.addEventListener('click', () => {
 
         // CHAMAR A FUNÇÃO
         changeBook(bookCovers)
+        buttonHidden()
                 
                 
                 
-    }
+    }    
         })
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
- previousBookButton.addEventListener('click', () => {
-    // AO CLICAR NO BOTÃO DA ESQUERDA:
-     
-    // SE O NÚMERO DO LIVRO SELECIONADO FOR MAIOR QUE 1 (Ou seja algum livro depois do primeiro):
-    if (selectedBookNumber > 1) {
-        // REMOVER 1 UNIDADE AO selectedBookNumber
-        selectedBookNumber--
-        console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
-        // CHAMAR A FUNÇÃO
-        changeBook(bookCovers)
-    }
-
-
-})
-
-
-
-
 
 
 
@@ -92,7 +80,21 @@ function changeBook(livros) {
     
 }
 
+// ----------------------------------------------------------------------------------------\\
 
 
+function buttonHidden() {
 
+    // ESCONDE O BOTÃO DA DIREITA SE CHEGAR NO ÚLTIMO LIVRO DISPONÍVEL
+    if (selectedBookNumber == availableBooks) {
+        nextBookButton.classList.add("disable")
+    } else if (nextBookButton.classList.contains("disable")) {
+        nextBookButton.classList.remove("disable")
+    }
 
+    if (selectedBookNumber == 1) {
+        previousBookButton.classList.add('disable')
+    } else if (previousBookButton.classList.contains('disable')) {
+        previousBookButton.classList.remove('disable')
+    }
+}
