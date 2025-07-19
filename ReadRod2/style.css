@@ -7,6 +7,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -156,7 +157,8 @@ header {
 
 .div-livros-title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: "DM Serif DIsplay", sans-serif;
   font-weight: 600;
   color: var(--azul-claro);
 }
@@ -194,12 +196,12 @@ header {
 
 .book-name {
   color: var(--azul-claro);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
 .paragraph {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: left;
 }
 
