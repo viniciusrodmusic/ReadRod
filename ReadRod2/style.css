@@ -181,21 +181,26 @@ header {
   justify-content: center;
   gap: 20px;
   width: 60%;
+
 }
 
 .paragraph,
 .book-name {
-  width: 80%;
+  width: fit-content;
+
+
+
 }
 
 .book-name {
   color: var(--azul-claro);
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .paragraph {
   font-size: 1.2rem;
+  text-align: left;
 }
 
 /* BOOK COVERS */

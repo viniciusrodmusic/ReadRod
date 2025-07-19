@@ -6,9 +6,19 @@ let availableBooks = bookCovers.length
 console.log(`Livros Disponíveis: ${availableBooks}`)
 
 
-
 // CADA LIVRO TEM SEU NÚMERO, O PRIMEIRO DA LISTA É O NÚMERO -> 1
 let selectedBookNumber = 1 // A PÁGINA INICIA SELECIONANDO O LIVRO 1
+
+import * as conteudo from "./contents.js"
+// Sinopse dos livros
+let paragraphSynopsis = document.querySelector('.paragraph')
+paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
+// Título dos livros
+let bookName = document.querySelector('.book-name')
+bookName.innerText = conteudo.bookTitle[selectedBookNumber]
+
+
+
 
 
 
@@ -36,6 +46,11 @@ if (selectedBookNumber > 1) {
     // CHAMAR A FUNÇÃO
     changeBook(bookCovers)
     buttonHidden()
+
+    // TROCAR A SINOPSE E O TÍTULO
+    paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
+    bookName.innerText = conteudo.bookTitle[selectedBookNumber]
+    
 }
 
 })
@@ -53,9 +68,14 @@ nextBookButton.addEventListener('click', () => {
         selectedBookNumber++
         console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
 
-        // CHAMAR A FUNÇÃO
+        // CHAMAR AS FUNÇÕES
         changeBook(bookCovers)
         buttonHidden()
+
+        // TROCAR A SINOPSE E O TÍTULO
+        paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
+        bookName.innerText = conteudo.bookTitle[selectedBookNumber]
+        
                 
                 
                 
@@ -80,21 +100,22 @@ function changeBook(livros) {
     
 }
 
-// ----------------------------------------------------------------------------------------\\
 
 
 function buttonHidden() {
-
+    
     // ESCONDE O BOTÃO DA DIREITA SE CHEGAR NO ÚLTIMO LIVRO DISPONÍVEL
     if (selectedBookNumber == availableBooks) {
         nextBookButton.classList.add("disable")
     } else if (nextBookButton.classList.contains("disable")) {
         nextBookButton.classList.remove("disable")
     }
-
+    
     if (selectedBookNumber == 1) {
         previousBookButton.classList.add('disable')
     } else if (previousBookButton.classList.contains('disable')) {
         previousBookButton.classList.remove('disable')
     }
 }
+// ----------------------------------------------------------------------------------------\\
+
