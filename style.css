@@ -144,11 +144,12 @@ header {
 
 
 .section-livros {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  height: 100vh;
+  padding-top: 50px;
+  height: 120vh;
   background-image: linear-gradient(
     var(--cinza-azulado-escuro),
     var(--cinza-azulado-claro)
@@ -173,7 +174,6 @@ header {
   flex: 1;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .book-sinopse {
@@ -181,38 +181,41 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   width: 60%;
+ 
 
+
+}
+
+
+.book-name {
+  display: flex;
+  align-items: end;
+  color: var(--azul-claro);
+  font-size: 2.2rem;
+  font-weight: 600;
+  height: 40%;
+}
+
+.paragraph {
+  font-size: 1rem;
+  text-align: left;
+  height: 40%;
 }
 
 .paragraph,
 .book-name {
-  width: fit-content;
-
+  width: 90%;
+  padding-left: 100px;
 
 
 }
-
-.book-name {
-  color: var(--azul-claro);
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-.paragraph {
-  font-size: 1.1rem;
-  text-align: left;
-}
-
 /* BOOK COVERS */
 .book-images {
   position: relative;
-  padding-right: 20px;
-  gap: 50px;
   display: flex;
-  /* align-items: center;
-  justify-content: start; */
+  gap: 50px;
   width: 40%;
 }
 
@@ -220,7 +223,8 @@ header {
   position: absolute;
   z-index: 1;
   top: 50%!important;
-  transform: translate(50%, -50%) !important;
+  left: 0px!important;
+  transform: translate(20%, -50%) !important;
   height: 30rem!important;
   opacity: 1 !important;
   transition: all 0.4s;
@@ -234,9 +238,8 @@ header {
 .covers {
   position: absolute;
   top: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(10%, -50%);
   opacity: 0;
-
   height: 25rem;
   box-shadow: -10px 10px 10px var(--cinza-azulado-escuro);
   cursor: pointer;

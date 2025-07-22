@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+:root {
+  --cinza-azulado-claro: #172536;
+  --cinza-azulado-escuro: #030911;
+  --azul-claro: #b7d6ff;
+  --amarelo-claro: #ffdea8;
+  --branco-pagina: #D9D9D9;
+}
+
+.chapter {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 10px 0px 10px;
+    background-color: var(--cinza-azulado-escuro);
+    width: 100%;
+    height: 3rem;
+    
+}
+
+/* MENU HAMBÚRGUER */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    width: 1.5rem;
+}
+
+.linha {
+    background-color: #ffffff;
+    height: 0.18rem;
+    transition: 0.2s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+
+/* ANIMAÇÃO DO MENU HAMBÚRGUER ABRINDO */
+#menu-toggle:checked + .menu-icon .linha:nth-child(1) {
+    transform: rotate(50deg) translate(0px, 0.8rem);
+}
+#menu-toggle:checked + .menu-icon .linha:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-icon .linha:nth-child(3) {
+    transform: rotate(-50deg) translate(0px, -0.8rem);
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    background-color: var(--branco-pagina);
+    box-shadow: 0px 0px 20px black;
+    height: 100vh;
+    width: 15rem;
+    transition: all 0.2s;
+    opacity: 1;
+}
+
+.overlay-disable {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+
+
+
+
+
+
+main {
+    background-color: var(--branco-pagina);
+    flex-grow: 1;
+    padding: 100px 300px 100px 300px;
+    
+}
+
+pre {
+    font-family: "Roboto Serif";
+    line-height: 1.8rem;
+    font-weight: 500;
+    text-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+footer {
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--cinza-azulado-escuro);
+    height: 3vh;
+}
