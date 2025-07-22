@@ -2,12 +2,18 @@ const nextBookButton = document.getElementById('next-book-button')
 const previousBookButton = document.getElementById('previous-book-button')
 const bookCovers = document.querySelectorAll('.covers')
 const divBookImages = document.querySelectorAll('.book-images')
+
+
 let availableBooks = bookCovers.length
 console.log(`Livros Disponíveis: ${availableBooks}`)
 
 
 // CADA LIVRO TEM SEU NÚMERO, O PRIMEIRO DA LISTA É O NÚMERO -> 1
 let selectedBookNumber = 1 // A PÁGINA INICIA SELECIONANDO O LIVRO 1
+
+// ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
+sessionStorage.setItem('livro-selecionado', selectedBookNumber)
+
 
 import * as conteudo from "./contents.js"
 // Sinopse dos livros
@@ -16,11 +22,6 @@ paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
 // Título dos livros
 let bookName = document.querySelector('.book-name')
 bookName.innerText = conteudo.bookTitle[selectedBookNumber]
-
-
-
-
-
 
 
 
@@ -51,6 +52,8 @@ if (selectedBookNumber > 1) {
     paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
     bookName.innerText = conteudo.bookTitle[selectedBookNumber]
     
+    // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
+    sessionStorage.setItem('livro-selecionado', selectedBookNumber)
 }
 
 })
@@ -75,9 +78,11 @@ nextBookButton.addEventListener('click', () => {
         // TROCAR A SINOPSE E O TÍTULO
         paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
         bookName.innerText = conteudo.bookTitle[selectedBookNumber]
-        
-                
-                
+
+        // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
+        sessionStorage.setItem('livro-selecionado', selectedBookNumber)
+
+                     
                 
     }    
         })
@@ -119,3 +124,8 @@ function buttonHidden() {
 }
 // ----------------------------------------------------------------------------------------\\
 
+// TRANSFORMA OS LIVROS EM UM BOTÃO CLICÁVEL, E REDIRECIONA PARA A PÁGINA DE LEITURA
+bookCovers.forEach( (cover) => {
+    cover.addEventListener('click', () => {
+    location.href = "leitura/index.html"})
+}) 

@@ -211,19 +211,25 @@ header {
 
 
 }
+
+
+
+
+
+
 /* BOOK COVERS */
 .book-images {
   position: relative;
   display: flex;
   gap: 50px;
   width: 40%;
+
 }
 
 .selected-book {
   position: absolute;
   z-index: 1;
   top: 50%!important;
-  left: 0px!important;
   transform: translate(20%, -50%) !important;
   height: 30rem!important;
   opacity: 1 !important;
@@ -244,6 +250,10 @@ header {
   box-shadow: -10px 10px 10px var(--cinza-azulado-escuro);
   cursor: pointer;
 }
+
+
+
+
 
 
 
