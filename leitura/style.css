@@ -51,6 +51,7 @@ header {
     justify-content: space-between;
     height: 40%;
     width: 1.5rem;
+    cursor: pointer;
 }
 
 .linha {
