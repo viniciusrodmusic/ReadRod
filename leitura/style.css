@@ -20,7 +20,7 @@ body {
   --cinza-azulado-escuro: #030911;
   --azul-claro: #b7d6ff;
   --amarelo-claro: #ffdea8;
-  --branco-pagina: #D9D9D9;
+  --branco-pagina: #a8b9c1;
 }
 
 .chapter {
@@ -105,17 +105,60 @@ header {
 main {
     background-color: var(--branco-pagina);
     flex-grow: 1;
-    padding: 100px 300px 100px 300px;
+    padding: 100px 200px 100px 200px;
     
 }
 
+
 pre {
     font-family: "Roboto Serif";
-    line-height: 1.8rem;
+    line-height: 3rem;
     font-weight: 500;
     text-wrap: wrap;
     font-size: 1.5rem;
 }
+
+
+
+
+
+/* LEFT/RIGTH BUTTONS  */
+.see-books-button {
+  z-index: 1;
+  font-size: 2rem;
+  color: var(--cinza-azulado-escuro);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.see-books-button:hover {
+  opacity: 1;
+}
+
+#next-book-button {
+  position: fixed;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#previous-book-button {
+  position: fixed;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.disable {
+    display: none!important;
+}
+
+
+
+
+
+
+
 
 footer {
     position: fixed;
