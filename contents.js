@@ -30,9 +30,24 @@ LIVROS:
 
 */
 
-/* LIVRO 1: CONTEÚDO POR CAPÍTULOS */
-export const firstBook = {
-    1: `   27 de Janeiro de 2012, o dia em que aquela criancinha (provavelmente já consideravelmente traquineira) veria o rumo de sua vida mudar completamente, e iria passar por momentos estreitos até se tornar quem é hoje emocionalmente. Pela minha memória, estávamos sentados no chão de uma garagem naquela noite, eu e várias crianças em um culto para crianças, onde havia muitas pessoas conhecidas. Então quem dirigia aquele culto havia dito que quem quisesse aceitar a Jesus, ficasse olhando para seus olhos, bem, e o resto que não quisesse ficasse de cabeça baixa. Na hora da decisão, uma criancinha decidida teve plena convicção, logo depois, fizemos uma oração onde este entregou sua vida para o Salvador, e claro, essa criancinha era eu. Entretanto, não creio que isso foi fruto da minha própria vontade, e sim da vontade de Deus (leia Rm 2:4, Rm 9:16, Rm 7:18, Rm 3:10-11) que me deu a decisão.
+/* ATENÇÃO:
+
+    A SEGUIR HÁ UM ANINHAMENTO DE OBJETOS, FUNCIONA DA SEGUINTE MANEIRA:
+
+    NO PRIMEIRO NIVEL TEMOS OS DIFERENTES LIVROS, POR EXEMPLO: books[1] = *livro número 1*
+
+    NO SEGUNDO NÍVEL TEMOS O CAPÍTULO REFERENTE AO LIVRO, POR EXEMPLO: books[1][1] = *livro 1 capítulo número 1*
+        ENTRETANTO COMO OS LIVROS PODEM NÃO COMEÇAR NO CAPÍTULO 1, TENDO POR EXEMPLO UM PREFÁCIO, INTRODUÇÃO
+        LOG0, TALVEZ O CAPÍTULO 1 ESTEJA EM OUTRO INDÍCE DIFERENTE DE 1, DE QUALQUER MANEIRA A PÁGINA JÁ INICIARÁ
+        NO ÍNDICE NÚMERO 1, INDEPENDENTEMENTE DE SER INTRODUÇÃO, PREFÁCIO OU CAPÍTULO DE FATO. 
+
+        O USUÁRIO PODERÁ PASSAR PARA A PRÓXIMA PÁGINA(PRÓXIMO CAPÍTULO) COM OS BOTÕES DE FLECHA NA ESQUERDA E
+        DIREITA DA TELA, ISSO AFETARÁ SOMENTE OS ÍNDICES DE NÍVEL 2, POIS O PRIMEIRO ÍNDICE REFERENTE AO LIVRO
+        ELE JÁ ESCOLHEU NÁ PÁGINA ANTERIOR, A PÁGINA PRINCIPAL.
+
+*/
+export const books = {
+    1: { 1: `   27 de Janeiro de 2012, o dia em que aquela criancinha (provavelmente já consideravelmente traquineira) veria o rumo de sua vida mudar completamente, e iria passar por momentos estreitos até se tornar quem é hoje emocionalmente. Pela minha memória, estávamos sentados no chão de uma garagem naquela noite, eu e várias crianças em um culto para crianças, onde havia muitas pessoas conhecidas. Então quem dirigia aquele culto havia dito que quem quisesse aceitar a Jesus, ficasse olhando para seus olhos, bem, e o resto que não quisesse ficasse de cabeça baixa. Na hora da decisão, uma criancinha decidida teve plena convicção, logo depois, fizemos uma oração onde este entregou sua vida para o Salvador, e claro, essa criancinha era eu. Entretanto, não creio que isso foi fruto da minha própria vontade, e sim da vontade de Deus (leia Rm 2:4, Rm 9:16, Rm 7:18, Rm 3:10-11) que me deu a decisão.
 
 Isso foi decisivo pra mim. Na época de criança, eu era só mais uma, que gostava de brincar, brigava com os primos, xingava, cheguei a mentir feio em uma comemoração de ano novo, pois havia recebido alguns centavos de uma pessoa, e este dinheirinho foi guardado, porém mais tarde eu fui atrás desses centavos para comprar um "xilito" (um jeito de chamar salgadinho aqui no Ceará), disse eu à minha mãe, porém na realidade maquinava conseguir bomba para continuar festejando, e como diz a velha frase: "Mentira tem perna curta", não durou muito aquela história. Muito tempo depois ainda me senti amargurado por conta disso, creio eu já estar experimentando os sinais da minha conversão da noite de 2012, eu agora tinha vida, sentia as dores do caminho mau, e até hoje minha mente pesa com os pecados, graças a Deus por isso, no nome do Senhor Jesus, do contrário eu seria só mais um defunto levando chibatadas, lembre-se que um cadáver não pode sentir dor.
 
@@ -71,7 +86,8 @@ Independente de qualquer coisa, louvado seja Deus Pai no nome do Senhor Jesus, s
 https://www.bibliaonline.com.br/acf/rm/8
 
 (Capítulo 1)
-`
+`},
+
 }
 
 
