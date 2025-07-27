@@ -20,7 +20,7 @@ body {
   --cinza-azulado-escuro: #030911;
   --azul-claro: #b7d6ff;
   --amarelo-claro: #ffdea8;
-  --branco-pagina: #a8b9c1;
+  --branco-pagina: #d8ebf4;
 }
 
 .chapter {
@@ -105,7 +105,7 @@ header {
 main {
     background-color: var(--branco-pagina);
     flex-grow: 1;
-    padding: 100px 200px 100px 200px;
+    padding: 100px 250px 100px 250px;
     
 }
 
@@ -115,7 +115,7 @@ pre {
     line-height: 3rem;
     font-weight: 500;
     text-wrap: wrap;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 
