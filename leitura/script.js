@@ -6,13 +6,47 @@ const bookChapter = document.querySelector('.chapter')
 const previousBookButton = document.getElementById('previous-book-button') // BOTÃO LEFT
 const nextBookButton = document.getElementById('next-book-button') // BOTÃO RIGHT
 
+const fontSizeButtons = document.querySelector(".font-size-buttons")
+const fontSizeMinus = fontSizeButtons.children[0]
+fontSizeMinus.style.opacity = 0.2
+const fontSizePlus = fontSizeButtons.children[2]
+
+let selectedBook = sessionStorage.getItem("livro-selecionado")
+let selectedChapter = 1
+
+let changeFontSize = 1 // 1rem
+
 // ESCONDE/EXIBE O MENU HAMBÚRGUER
 menuIcon.addEventListener('click', (e) => {
     overlay.classList.toggle('overlay-disable')
 })
 
-let selectedBook = sessionStorage.getItem("livro-selecionado")
-let selectedChapter = 1
+// AUMENTA/DIMINUI LETRA
+fontSizePlus.addEventListener('click', (e) => {
+    // SE O TAMANHO DA LETRA FOR MENOR QUE O LIMITE DE 2.5REM
+    if (changeFontSize < 2.5) {
+    fontSizePlus.style.opacity = 1
+    changeFontSize += 0.5 
+    bookContent.style.fontSize = `${changeFontSize}rem`
+    bookContent.style.lineHeight = `${changeFontSize + 1}rem`
+    }
+    else {
+        //SE NÃO FOR O BOTÃO FICA "DESATIVADO"
+        fontSizePlus.style.opacity = "0.2"
+    }
+})
+
+fontSizeMinus.addEventListener('click', (e) => {
+    if (changeFontSize > 1) {
+    fontSizeMinus.style.opacity = 1
+    changeFontSize -= 0.5 
+    bookContent.style.fontSize = `${changeFontSize}rem`
+    bookContent.style.lineHeight = `${changeFontSize + 1}rem`
+    }
+    else {
+        fontSizeMinus.style.opacity = "0.2"
+    }
+})
 
 
 

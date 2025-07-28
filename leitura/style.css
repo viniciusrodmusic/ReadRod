@@ -1,18 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 body {
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
 }
 
 :root {
@@ -24,157 +25,149 @@ body {
 }
 
 .chapter {
-    font-family: "DM Serif Display", Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    font-size: 1.5rem;
+  font-family: "DM Serif Display", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 
 header {
-    position: fixed;
-    z-index: 2;
+  position: fixed;
+  z-index: 2;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 0px 20px 0px 20px;
-    background-image: linear-gradient(to left , var(--cinza-azulado-claro), var(--cinza-azulado-escuro));
-    width: 100%;
-    height: 3rem;
-    
+  padding: 0px 20px 0px 20px;
+  background-image: linear-gradient(
+    to left,
+    var(--cinza-azulado-claro),
+    var(--cinza-azulado-escuro)
+  );
+  width: 100%;
+  height: 3rem;
 }
 
 /* MENU HAMBÚRGUER */
 .menu-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 40%;
-    width: 1.5rem;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  width: 1.5rem;
+  cursor: pointer;
 }
 
 .linha {
-    background-color: #ffffff;
-    height: 0.18rem;
-    transition: 0.2s;
+  background-color: #ffffff;
+  height: 0.18rem;
+  transition: 0.2s;
 }
 
 #menu-toggle {
-    display: none;
+  display: none;
 }
-
-
 
 /* ANIMAÇÃO DO MENU HAMBÚRGUER ABRINDO */
 #menu-toggle:checked + .menu-icon .linha:nth-child(1) {
-    transform: rotate(45deg) translate(0px, 0.7rem);
+  transform: rotate(45deg) translate(0px, 0.7rem);
 }
 #menu-toggle:checked + .menu-icon .linha:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 #menu-toggle:checked + .menu-icon .linha:nth-child(3) {
-    transform: rotate(-45deg) translate(0px, -0.7rem);
+  transform: rotate(-45deg) translate(0px, -0.7rem);
 }
 
-
-
-
-
 .overlay {
-    position: fixed;
-    z-index: 1;
-    top: 0px;
-    right: 0px;
-    background-color: var(--branco-pagina);
-    box-shadow: 5px 0px 10px black;
-    height: 100vh;
-    width: 20rem;
-    transition: all 0.2s;
-    opacity: 1;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  background-color: var(--branco-pagina);
+  box-shadow: 5px 0px 10px black;
+  height: 100vh;
+  width: 20rem;
+  transition: all 0.2s;
+  opacity: 1;
 }
 
 .overlay-disable {
-    transform: translateX(100%);
-    opacity: 0;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .nav-overlay {
-    padding: 3.6rem 20px 0px 20px;
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
+  padding: 3.6rem 20px 0px 20px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .options-list-overlay {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style-type: none;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
 }
 
 .options-overlay {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 
 CHANGE BOOK FONT-SIZE BUTTONS +/- 
 */
 #font-size-option div {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-#font-size-option div button {
-   border-radius: 50%;
-   border: none;
-   box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
-   background-color: var(--azul-claro);
-   width: 1.5rem;
-   height: auto;
-   cursor: pointer;
+.font-size-buttons button {
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+  background-color: var(--azul-claro);
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.font-size-buttons button:hover {
+  background-color: var(--cinza-azulado-claro);
+  color: var(--azul-claro);
 }
 
 /*
 CHANGE PAGE THEME BUTTON
 */
 #theme-option button {
-    border: none;
-    background-color: inherit;
+  border: none;
+  background-color: inherit;
 }
 
 .theme-icon {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 40%;
-    padding: 0.3rem;
-    background-color: var(--azul-claro);
-    cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 40%;
+  padding: 0.3rem;
+  background-color: var(--azul-claro);
+  cursor: pointer;
 }
-
 
 main {
-    background-color: var(--branco-pagina);
-    flex-grow: 1;
-    padding: 100px 250px 100px 250px;
-    
+  background-color: var(--branco-pagina);
+  flex-grow: 1;
+  padding: 100px 250px 100px 250px;
 }
 
-
-pre {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    line-height: 2rem;
-    font-weight: 500;
-    text-wrap: wrap;
-    font-size: 1.2rem;
+.book-content {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  line-height: 2rem;
+  font-weight: 500;
+  text-wrap: wrap;
+  font-size: 1rem;
 }
-
-
-
-
-
-
-
 
 /* LEFT/RIGTH BUTTONS  */
 .see-books-button {
@@ -204,21 +197,14 @@ pre {
 }
 
 .disable {
-    display: none!important;
+  display: none !important;
 }
 
-
-
-
-
-
-
-
 footer {
-    position: fixed;
-    z-index: 1;
-    bottom: 0px;
-    width: 100%;
-    background-color: var(--cinza-azulado-escuro);
-    height: 3vh;
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  width: 100%;
+  background-color: var(--cinza-azulado-escuro);
+  height: 3vh;
 }
