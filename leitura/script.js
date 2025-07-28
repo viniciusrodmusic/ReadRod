@@ -31,9 +31,10 @@ async function buscarConteudo() {
 
 function colocandoConteudo() {
     buscarConteudo().then( (responseObject) => {
-        bookContent.innerHTML = responseObject[selectedBook - 1]["capitulo"][selectedChapter]["conteudo"]
-        bookChapter.innerText = responseObject[selectedBook - 1]["capitulo"][selectedChapter]["titulo"]
-        console.log("Capítulos disponíveis nesse livro: ", responseObject[selectedBook - 1]["capitulos-disponiveis"])
+        bookContent.innerHTML = responseObject[selectedBook - 1]["capitulo"][selectedChapter]["conteudo"];
+        bookChapter.innerText = responseObject[selectedBook - 1]["capitulo"][selectedChapter]["titulo"];
+
+        console.log("Capítulos disponíveis nesse livro: ", responseObject[selectedBook - 1]["capitulos-disponiveis"]);
         // ARMAZENANDO A QUANT. DE CAPÍTULOS NO SESSION STORAGE DO NAVEGADOR
         sessionStorage.setItem("availableChapters", responseObject[selectedBook - 1]["capitulos-disponiveis"])
         })
@@ -52,15 +53,55 @@ const availableChapters = sessionStorage.getItem("availableChapters")
 
 
 
+
+
+
 // ADICIONANDO EVENTO AOS BOTÕES LEFT/RIGHT, PARA QUE O LEITOR POSSA TROCAR AS PÁGINAS
+// REUTILIZEI OS BOTÕES DE TROCAR LIVRO DA PÁGINA PRINCIPAL
+
+
+
+function buttonHidden() {
+    
+    // ESCONDE O BOTÃO DA DIREITA SE CHEGAR NO ÚLTIMO CAPÍTULO DISPONÍVEL
+    if (selectedChapter == availableChapters) {
+        nextBookButton.classList.add("disable")
+    } else if (nextBookButton.classList.contains("disable")) {
+        nextBookButton.classList.remove("disable")
+    }
+    
+    // ESCONDE O BOTÃO DA ESQUERDA SE ESTIVE NO PRIMEIRO CAPÍTULO DISPONÍVEL
+    if (selectedChapter == 1) {
+        previousBookButton.classList.add('disable')
+    } else if (previousBookButton.classList.contains('disable')) {
+        previousBookButton.classList.remove('disable')
+    }
+}
+
+
+
+
+
+
 nextBookButton.addEventListener('click', (event) => {
     if (selectedChapter < availableChapters) {
-        selectedChapter++
-        colocandoConteudo()
+        selectedChapter++;
+        colocandoConteudo();
+        buttonHidden()
         console.log(selectedChapter)
     }
    
 })
+
+previousBookButton.addEventListener('click', (event) => {
+    if (selectedChapter > 1) {
+        selectedChapter--;
+        colocandoConteudo();
+        buttonHidden();
+        console.log(selectedChapter)
+    }
+})
+
 //------------------------------------------------------------------------------------
 
 

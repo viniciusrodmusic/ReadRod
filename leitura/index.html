@@ -16,7 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
         <!-- DM SERIF DISPLAY -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
+        <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="./script.js" defer></script>
     <title>Leitura</title>
 </head>
@@ -44,7 +45,27 @@
     <main>
         <!-- O QUE APARECE QUANDO O MENU HAMBÚRGUER É PRESSIONADO -->
         <div class="overlay overlay-disable">
-            
+
+            <nav class="nav-overlay">
+                <ul class="options-list-overlay">
+
+                    <li class="options-overlay" id="font-size-option">
+                        <h3>Letra:</h3>
+                        <div>
+                            <button type="button">-</button>
+                            <p>Aa</p>
+                            <button type="button">+</button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="options-overlay" id="theme-option">
+                        <h3>Tema:</h3>
+                        <button>
+                            <i class="fa-solid fa-moon theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
         <pre class="book-content">
