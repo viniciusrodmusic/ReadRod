@@ -4,12 +4,11 @@ const bookContent = document.querySelector('.book-content') // Onde o conteúdo 
 const bookChapter = document.querySelector('.chapter')
 
 const previousChapterButton = document.getElementById('previous-book-button') // BOTÃO LEFT
-const nextBookButton = document.getElementById('next-book-button') // BOTÃO RIGHT
+const nextChapterButton = document.getElementById('next-book-button') // BOTÃO RIGHT
 
 const fontSizeButtons = document.querySelector(".font-size-buttons")
-const fontSizeMinus = fontSizeButtons.children[0]
-fontSizeMinus.style.opacity = 0.2
-const fontSizePlus = fontSizeButtons.children[2]
+const fontSizeMinus = fontSizeButtons.children[0] // -
+const fontSizePlus = fontSizeButtons.children[2] // +
 
 const themeButton = document.querySelector('.theme-button')
 const themeIcon = document.querySelector('.theme-icon')
@@ -30,29 +29,27 @@ fontSizePlus.addEventListener('click', (e) => {
     fontSizeMinus.style.opacity = 1
     // SE O TAMANHO DA LETRA FOR MENOR QUE O LIMITE DE 2.5REM
     if (changeFontSize < 2.5) {
-    fontSizePlus.style.opacity = 1
     changeFontSize += 0.5 
     bookContent.style.fontSize = `${changeFontSize}rem`
     bookContent.style.lineHeight = `${changeFontSize + 1}rem`
     }
-    else {
-        //SE NÃO FOR O BOTÃO FICA "DESATIVADO"
-        fontSizePlus.style.opacity = "0.2"
-    }
+
 })
 
 fontSizeMinus.addEventListener('click', (e) => {
-    fontSizePlus.style.opacity = 1
     if (changeFontSize > 1) {
-    fontSizeMinus.style.opacity = 1
     changeFontSize -= 0.5 
     bookContent.style.fontSize = `${changeFontSize}rem`
     bookContent.style.lineHeight = `${changeFontSize + 1}rem`
     }
-    else {
-        fontSizeMinus.style.opacity = "0.2"
-    }
+
 })
+
+
+
+
+
+
 
 
 
@@ -105,12 +102,12 @@ function buttonHidden() {
     
     // ESCONDE O BOTÃO DA DIREITA SE CHEGAR NO ÚLTIMO CAPÍTULO DISPONÍVEL
     if (selectedChapter == availableChapters) {
-        nextBookButton.classList.add("disable")
-    } else if (nextBookButton.classList.contains("disable")) {
-        nextBookButton.classList.remove("disable")
+        nextChapterButton.classList.add("disable")
+    } else if (nextChapterButton.classList.contains("disable")) {
+        nextChapterButton.classList.remove("disable")
     }
     
-    // ESCONDE O BOTÃO DA ESQUERDA SE ESTIVE NO PRIMEIRO CAPÍTULO DISPONÍVEL
+    // ESCONDE O BOTÃO DA ESQUERDA SE ESTIVER NO PRIMEIRO CAPÍTULO DISPONÍVEL
     if (selectedChapter == 1) {
         previousChapterButton.classList.add('disable')
     } else if (previousChapterButton.classList.contains('disable')) {
@@ -123,11 +120,12 @@ function buttonHidden() {
 
 
 
-nextBookButton.addEventListener('click', (event) => {
+nextChapterButton.addEventListener('click', (event) => {
     if (selectedChapter < availableChapters) {
+
         selectedChapter++;
+        buttonHidden();
         colocandoConteudo();
-        buttonHidden()
         console.log(selectedChapter)
     }
    
@@ -148,7 +146,7 @@ previousChapterButton.addEventListener('click', (event) => {
 themeButton.addEventListener('click', (event) => {
     overlay.classList.toggle('dark-theme');
     main.classList.toggle('dark-theme')
-    nextBookButton.classList.toggle('button-dark-theme')
+    nextChapterButton.classList.toggle('button-dark-theme')
     previousChapterButton.classList.toggle('button-dark-theme')
 
     if (themeIcon.classList.contains('fa-moon')) {
