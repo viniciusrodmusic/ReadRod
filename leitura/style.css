@@ -159,6 +159,7 @@ main {
   background-color: var(--branco-pagina);
   flex-grow: 1;
   padding: 100px 250px 100px 250px;
+  transition: 0.2s;
 }
 
 .book-content {
@@ -167,6 +168,15 @@ main {
   font-weight: 500;
   text-wrap: wrap;
   font-size: 1rem;
+}
+
+.dark-theme {
+  background-color: var(--cinza-azulado-escuro)!important;
+  color: var(--branco-pagina)!important;
+}
+
+.button-dark-theme {
+  color: var(--branco-pagina)!important;
 }
 
 /* LEFT/RIGTH BUTTONS  */

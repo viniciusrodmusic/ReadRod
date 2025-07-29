@@ -3,13 +3,16 @@ const overlay = document.querySelector('.overlay') // O que aparece quando o men
 const bookContent = document.querySelector('.book-content') // Onde o conteúdo do livro é exibido
 const bookChapter = document.querySelector('.chapter')
 
-const previousBookButton = document.getElementById('previous-book-button') // BOTÃO LEFT
+const previousChapterButton = document.getElementById('previous-book-button') // BOTÃO LEFT
 const nextBookButton = document.getElementById('next-book-button') // BOTÃO RIGHT
 
 const fontSizeButtons = document.querySelector(".font-size-buttons")
 const fontSizeMinus = fontSizeButtons.children[0]
 fontSizeMinus.style.opacity = 0.2
 const fontSizePlus = fontSizeButtons.children[2]
+
+const themeButton = document.querySelector('.theme-icon')
+const main = document.querySelector('main')
 
 let selectedBook = sessionStorage.getItem("livro-selecionado")
 let selectedChapter = 1
@@ -23,6 +26,7 @@ menuIcon.addEventListener('click', (e) => {
 
 // AUMENTA/DIMINUI LETRA
 fontSizePlus.addEventListener('click', (e) => {
+    fontSizeMinus.style.opacity = 1
     // SE O TAMANHO DA LETRA FOR MENOR QUE O LIMITE DE 2.5REM
     if (changeFontSize < 2.5) {
     fontSizePlus.style.opacity = 1
@@ -37,6 +41,7 @@ fontSizePlus.addEventListener('click', (e) => {
 })
 
 fontSizeMinus.addEventListener('click', (e) => {
+    fontSizePlus.style.opacity = 1
     if (changeFontSize > 1) {
     fontSizeMinus.style.opacity = 1
     changeFontSize -= 0.5 
@@ -106,9 +111,9 @@ function buttonHidden() {
     
     // ESCONDE O BOTÃO DA ESQUERDA SE ESTIVE NO PRIMEIRO CAPÍTULO DISPONÍVEL
     if (selectedChapter == 1) {
-        previousBookButton.classList.add('disable')
-    } else if (previousBookButton.classList.contains('disable')) {
-        previousBookButton.classList.remove('disable')
+        previousChapterButton.classList.add('disable')
+    } else if (previousChapterButton.classList.contains('disable')) {
+        previousChapterButton.classList.remove('disable')
     }
 }
 
@@ -127,7 +132,7 @@ nextBookButton.addEventListener('click', (event) => {
    
 })
 
-previousBookButton.addEventListener('click', (event) => {
+previousChapterButton.addEventListener('click', (event) => {
     if (selectedChapter > 1) {
         selectedChapter--;
         colocandoConteudo();
@@ -139,3 +144,11 @@ previousBookButton.addEventListener('click', (event) => {
 //------------------------------------------------------------------------------------
 
 
+themeButton.addEventListener('click', (event) => {
+    overlay.classList.toggle('dark-theme');
+    main.classList.toggle('dark-theme')
+    nextBookButton.classList.toggle('button-dark-theme')
+    previousChapterButton.classList.toggle('button-dark-theme')
+})
+
+//
