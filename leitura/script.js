@@ -11,7 +11,8 @@ const fontSizeMinus = fontSizeButtons.children[0]
 fontSizeMinus.style.opacity = 0.2
 const fontSizePlus = fontSizeButtons.children[2]
 
-const themeButton = document.querySelector('.theme-icon')
+const themeButton = document.querySelector('.theme-button')
+const themeIcon = document.querySelector('.theme-icon')
 const main = document.querySelector('main')
 
 let selectedBook = sessionStorage.getItem("livro-selecionado")
@@ -149,6 +150,12 @@ themeButton.addEventListener('click', (event) => {
     main.classList.toggle('dark-theme')
     nextBookButton.classList.toggle('button-dark-theme')
     previousChapterButton.classList.toggle('button-dark-theme')
+
+    if (themeIcon.classList.contains('fa-moon')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun')
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon')
+    }
 })
 
 //

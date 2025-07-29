@@ -142,17 +142,20 @@ CHANGE BOOK FONT-SIZE BUTTONS +/-
 /*
 CHANGE PAGE THEME BUTTON
 */
-#theme-option button {
-  border: none;
-  background-color: inherit;
-}
 
-.theme-icon {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+.theme-button {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   border-radius: 40%;
-  padding: 0.3rem;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: var(--azul-claro);
   cursor: pointer;
+}
+
+.theme-button:hover {
+  background-color: var(--cinza-azulado-claro);
+  color: var(--azul-claro);
 }
 
 main {
@@ -171,12 +174,12 @@ main {
 }
 
 .dark-theme {
-  background-color: var(--cinza-azulado-escuro)!important;
-  color: var(--branco-pagina)!important;
+  background-color: var(--cinza-azulado-escuro) !important;
+  color: var(--branco-pagina) !important;
 }
 
 .button-dark-theme {
-  color: var(--branco-pagina)!important;
+  color: var(--branco-pagina) !important;
 }
 
 /* LEFT/RIGTH BUTTONS  */
