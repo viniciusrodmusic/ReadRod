@@ -53,6 +53,8 @@ header {
 }
 
 /* NAVBAR */
+
+
 .div-nav-main-page {
   display: flex;
   justify-content: center;
@@ -63,35 +65,43 @@ header {
   border-bottom: 1px solid var(--azul-claro);
 }
 
+
 .nav-main-page {
   font-size: 1.2rem;
   display: flex;
   gap: 40px;
+} 
+
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+
 }
 
-#livros,
-#textos,
-#autor {
+.nav-list li {
   transition: all 0.3s;
+  cursor: pointer;
 }
 
-#livros:hover {
+.nav-list li:hover {
+  transform: scale(1.05);
   color: var(--amarelo-claro);
-  scale: 1.2;
+  text-shadow: 2px -2px 10px rgba(92, 88, 24, 0.5);
 }
 
-#textos:hover {
-  color: var(--amarelo-claro);
-  scale: 1.2;
+#textos, #autor {
+  opacity: 0.2;
+  cursor: default;
 }
 
-#autor:hover {
-  color: var(--amarelo-claro);
-  scale: 1.2;
+#textos:hover, #autor:hover {
+  cursor: not-allowed;
 }
 
-/* LANGUAGES: PORTUGUESE/SPANISH */
-.div-languages {
+/* LANGUAGES: PORTUGUESE/SPANISH  EXCLUIR PROVAVELMENTE */
+/* .div-languages {
   display: flex;
   gap: 5px;
   align-items: center;
@@ -103,7 +113,13 @@ header {
 
 #portugues {
   height: 1.5rem;
-}
+} */
+
+
+
+
+
+
 
 /* FIRST SECTION: LIVROS */
 
