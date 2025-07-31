@@ -29,8 +29,16 @@
         "livro": "The Best Way To Suffer",
         "capitulo": {
             "1": {"conteudo": "Written by someone who loves loving someone and has a lot of experience doing so. Brasilian, so do not mind if I lack english grammar.\nTo catch better the book message, read slowly and feel the words, love is tasting, but is love always pleasant?\n\nEnjoy the reading.",
-            "titulo": "About"}
+            "titulo": "About"},
+
+            "2": {"conteudo": "My darlin', I got no words to describe what I'm feeling when I look into your shiny eyes\nAnd I would live everyday looking at the same look everyday\nAnd what to say about your hugs?\nThey are my clothes in winter\n\nMy darlin', I got no words to describe how much I love you\nAnd I would live everyday feeling the same arms\nAnd what to say about your hands?\nThey are my gloves in winter\n\nMy darlin', I got no words to describe the happiness I feel loving you\nAnd I would live everyday smiling with you\nAnd what to say about your smiles?\nThey are my feed in cold days\n\nMy darlin', I got no words to describe the moments I've lived being near you\nAnd I would live everyday... living the same moments near you...\nAnd what to say about what you said?\nThey are m...\n\nMy darlin', I got no words to describe what I wanna do if you accept become my love\nAnd I would live everyday asking myself 'bout it, what am I going to do today?\n\n...\n\nAnd what to say about your desires?\nWell, they are my suffering, because you don't want to love me the same.",
+            "titulo": "My Darlin'"},
+
+            "3": {"conteudo": "But if I had known the love would put me in a pedestal to many see\n\nBut if I had known the care would bring me empathy\n\nBut If I Had known I would miss you after the hug\n\nBut if I had known I would feel your smell, when I'm far away from you\n\nBut if I had known that the love would make me live\n\nBut if I had known I would become needy far away from you\n\nBut if I had known...\n\nI wouldn't have went back, and would have lived each moment with you, my love",
+            "titulo": "If I Had Known"},
+            "4": {"conteudo": "I miss hearing your voice\n\nI miss your presence\n\nI miss looking at your eyes\n\nI miss looking at your hair\n\nI miss you, and I can't take waiting anymore, to go back living around you\n\nThe uncertainty that makes me live\n\nI wonder if I'm gonna be inside her heart...\n\nThat's it, oh darling, how much I miss you, if I can call you like that.",
+            "titulo": "I Miss You and it Makes me Sad"}
         },
-        "capitulos-disponiveis": null
+        "capitulos-disponiveis": 4
     }
 ]
