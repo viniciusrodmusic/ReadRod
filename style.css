@@ -165,7 +165,7 @@ header {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
-  height: 120vh;
+  height: 100vh;
   background-image: linear-gradient(
     var(--cinza-azulado-escuro),
     var(--cinza-azulado-claro)
@@ -210,7 +210,7 @@ header {
   display: flex;
   align-items: end;
   color: var(--azul-claro);
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 600;
   height: 40%;
 }

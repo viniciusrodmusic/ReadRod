@@ -1,6 +1,6 @@
 [
     {
-        "livro": "O Que É Ser Dependente",
+        "livro": "O Que É Ser Dependente - A Vida Cristã e Seus Aspectos",
         "capitulo": {
             "1": {"conteudo": "Por meio deste livro, espero poder, com embasamentos, fatos, mostrar ao leitor o que passa alguém que é transformado pela fé em Jesus. Este livro é recomendado para cristãos, como também, para aqueles que não creem e/ou se interessem em conhecer um pouco de minha vida. Todos estão convidados a ler.\n\nAo decorrer do livro, coloco referências bíblicas para sustentar meus argumentos, sinta-se à vontade para conferí-los.\n\nConvertido há 11 anos, as mudanças em minha vida são perceptíveis, e a resistência a sofrimentos que desenvolvi é algo surpreendente que creio ser impossível ser fruto de meus esforços pessoais, intelectuais. Com minhas bagagens de ser humano falho, e, às vezes, em dores, acredito ser possível uma reflexão de como tudo colabora para o bem daqueles que amam a Deus, e de como as circunstâncias da vida podem ser uma maneira de nos manter dependentes do Maravilhoso Criador, Deus e Pai.\n\nGratidão.", 
             "titulo": "Prefácio"
@@ -19,7 +19,8 @@
             }
         
         },
-        "capitulos-disponiveis": 5
+        "capitulos-disponiveis": 5,
+        "sinopse": "O livro contém algumas histórias e reflexões de Vinícius Rod,\nconvertido à Jesus e portador de Transtorno Obsessivo-Compulsivo,\ndoença psiquiátrica, cientificamente sem cura. Durante e depois das\nmuitas aflições da vida, o autor reflete sobre o que significa estar\nem dependência de Deus no dia a dia, e as transformações que a fé genuína\nem Jesus Cristo pode trazer, especialmente se tratando dos dias atuais de caos."
             
     },     
  
@@ -39,6 +40,12 @@
             "4": {"conteudo": "I miss hearing your voice\n\nI miss your presence\n\nI miss looking at your eyes\n\nI miss looking at your hair\n\nI miss you, and I can't take waiting anymore, to go back living around you\n\nThe uncertainty that makes me live\n\nI wonder if I'm gonna be inside her heart...\n\nThat's it, oh darling, how much I miss you, if I can call you like that.",
             "titulo": "I Miss You and it Makes me Sad"}
         },
-        "capitulos-disponiveis": 4
+        "capitulos-disponiveis": 4,
+        "sinopse": "The poetry book talks about loving someone, usually considered\nartistically by the author the best way to suffer. Let's love."
     }
 ]
+
+
+
+
+

@@ -15,16 +15,34 @@ let selectedBookNumber = 1 // A PÁGINA INICIA SELECIONANDO O LIVRO 1
 sessionStorage.setItem('livro-selecionado', selectedBookNumber)
 
 
-import * as conteudo from "./contents.js"
 // Sinopse dos livros
 let paragraphSynopsis = document.querySelector('.paragraph')
-paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
 // Título dos livros
 let bookName = document.querySelector('.book-name')
-bookName.innerText = conteudo.bookTitle[selectedBookNumber]
 
 
 
+
+
+async function buscarConteudo() {
+    // BUSCANDO O TITULO E SINOPSE DO LIVRO
+   const response = await fetch("./contents/contents.json");
+    // CONVERTENDO PRA OBJETO JAVASCRIPT
+    const responseObject = await response.json();
+    // RETORNA O OBJETO PARA SER USADO NO THEN
+    return responseObject
+}
+
+function colocandoConteudo() {
+    // FUNÇÃO QUE COLOCA O TITULO E A SINOPSE DO LIVRO SELECIONADO NO HTML
+    buscarConteudo().then( (responseObject) => {
+        bookName.innerHTML = responseObject[selectedBookNumber - 1]["livro"];
+        paragraphSynopsis.innerText = responseObject[selectedBookNumber - 1]["sinopse"];
+        }
+    )
+}
+
+colocandoConteudo()
 
 
 
@@ -37,7 +55,6 @@ bookName.innerText = conteudo.bookTitle[selectedBookNumber]
     /* BOTÕES PARA PASSAR O LIVRO: ESQUERDA E DIREITA */
     
 previousBookButton.addEventListener('click', () => {
-// AO CLICAR NO BOTÃO DA ESQUERDA:
  
 // SE O NÚMERO DO LIVRO SELECIONADO FOR MAIOR QUE 1 (Ou seja algum livro depois do primeiro):
 if (selectedBookNumber > 1) {
@@ -47,11 +64,8 @@ if (selectedBookNumber > 1) {
     // CHAMAR A FUNÇÃO
     changeBook(bookCovers)
     buttonHidden()
-
-    // TROCAR A SINOPSE E O TÍTULO
-    paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
-    bookName.innerText = conteudo.bookTitle[selectedBookNumber]
-    
+    colocandoConteudo()
+  
     // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
     sessionStorage.setItem('livro-selecionado', selectedBookNumber)
 }
@@ -61,8 +75,6 @@ if (selectedBookNumber > 1) {
 
 
 nextBookButton.addEventListener('click', () => {
-    
-    // AO CLICAR NO BOTÃO DA DIREITA:
     
     // SE O NÚMERO DO LIVRO SELECIONADO(já começa em 1) FOR MENOR QUE O TOTAL DE LIVROS DISPONÍVEIS:
     if (selectedBookNumber < availableBooks) {
@@ -76,8 +88,7 @@ nextBookButton.addEventListener('click', () => {
         buttonHidden()
 
         // TROCAR A SINOPSE E O TÍTULO
-        paragraphSynopsis.innerText = conteudo.synopsis[selectedBookNumber]
-        bookName.innerText = conteudo.bookTitle[selectedBookNumber]
+        colocandoConteudo()
 
         // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
         sessionStorage.setItem('livro-selecionado', selectedBookNumber)
