@@ -71,20 +71,15 @@ function colocandoConteudo() {
         bookContent.innerHTML = responseObject[selectedBook - 1]["capitulo"][selectedChapter]["conteudo"];
         bookChapter.innerText = responseObject[selectedBook - 1]["capitulo"][selectedChapter]["titulo"];
 
-        console.log("Capítulos disponíveis nesse livro: ", responseObject[selectedBook - 1]["capitulos-disponiveis"]);
         // ARMAZENANDO A QUANT. DE CAPÍTULOS NO SESSION STORAGE DO NAVEGADOR
         sessionStorage.setItem("availableChapters", responseObject[selectedBook - 1]["capitulos-disponiveis"]);
-
+        // CAPTURANDO ESSA QUANTIDADE E COLOCANDO NA VARIÁVEL
         availableChapters = sessionStorage.getItem("availableChapters")
         })
         
     }
 
 colocandoConteudo()
-// PEGA A QUANTIDADE DE CAPÍTULOS DISPONÍVEIS NO LIVRO, QUE ESTÁ ARMAZENADO NO SESSION STORAGE DO NAVEGADOR, E A ARMAZENA
-
-//------------------------------------------------------
-
 
 
 
@@ -126,7 +121,6 @@ nextChapterButton.addEventListener('click', (event) => {
         selectedChapter++;
         buttonHidden();
         colocandoConteudo();
-        console.log(selectedChapter)
     }
    
 })
@@ -136,7 +130,6 @@ previousChapterButton.addEventListener('click', (event) => {
         selectedChapter--;
         colocandoConteudo();
         buttonHidden();
-        console.log(selectedChapter)
     }
 })
 
