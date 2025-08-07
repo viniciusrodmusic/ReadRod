@@ -54,7 +54,7 @@ fontSizeMinus.addEventListener('click', (e) => {
 
 
 
-
+let availableChapters = undefined
 
 // EXIBINDO O CONTEÚDO NA PÁGINA----------------------
 async function buscarConteudo() {
@@ -73,14 +73,16 @@ function colocandoConteudo() {
 
         console.log("Capítulos disponíveis nesse livro: ", responseObject[selectedBook - 1]["capitulos-disponiveis"]);
         // ARMAZENANDO A QUANT. DE CAPÍTULOS NO SESSION STORAGE DO NAVEGADOR
-        sessionStorage.setItem("availableChapters", responseObject[selectedBook - 1]["capitulos-disponiveis"])
+        sessionStorage.setItem("availableChapters", responseObject[selectedBook - 1]["capitulos-disponiveis"]);
+
+        availableChapters = sessionStorage.getItem("availableChapters")
         })
         
     }
 
 colocandoConteudo()
 // PEGA A QUANTIDADE DE CAPÍTULOS DISPONÍVEIS NO LIVRO, QUE ESTÁ ARMAZENADO NO SESSION STORAGE DO NAVEGADOR, E A ARMAZENA
-const availableChapters = sessionStorage.getItem("availableChapters")
+
 //------------------------------------------------------
 
 
@@ -117,10 +119,8 @@ function buttonHidden() {
 
 
 
-
-
-
 nextChapterButton.addEventListener('click', (event) => {
+
     if (selectedChapter < availableChapters) {
 
         selectedChapter++;
