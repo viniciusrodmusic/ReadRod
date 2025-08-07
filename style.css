@@ -281,3 +281,40 @@ header {
   background-color: var(--cinza-azulado-escuro);
   height: 100vh;
 }
+
+
+
+
+
+
+
+.mobile-message {
+  display: none;
+}
+
+/* INDISPONÍVEL PARA MOBILE:  */
+
+@media (max-width: 768px) {
+  *, header {
+    display: none;
+  }
+
+  html {
+    display: block!important;
+    background-color: black;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-message {
+    display: block!important;
+    color: var(--azul-claro);
+    padding: 30px;
+    font-size: 5vw;
+
+  }
+}

@@ -86,15 +86,11 @@ nextBookButton.addEventListener('click', () => {
         // CHAMAR AS FUNÇÕES
         changeBook(bookCovers)
         buttonHidden()
-
-        // TROCAR A SINOPSE E O TÍTULO
         colocandoConteudo()
 
         // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
         sessionStorage.setItem('livro-selecionado', selectedBookNumber)
 
-                     
-                
     }    
         })
         
