@@ -73,6 +73,7 @@ Atualmente a plataforma inclui:
 
 - **Seleção de Livros**: Navegue entre diferentes títulos usando os botões direcionais
 - **Visualização de Sinopse**: Cada livro exibe automaticamente título e sinopse
+- **Iniciar Leitura**: **Clique na capa do livro** para começar a ler
 - **Modo Leitura**: Interface limpa e focada para leitura dos capítulos
 - **Persistência**: O livro selecionado é mantido entre as sessões
 
