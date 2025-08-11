@@ -16,9 +16,9 @@ sessionStorage.setItem('livro-selecionado', selectedBookNumber)
 
 
 // Sinopse dos livros
-let paragraphSynopsis = document.querySelector('.paragraph')
+let paragraphSynopsis = document.querySelectorAll('.paragraph')
 // Título dos livros
-let bookName = document.querySelector('.book-name')
+let bookName = document.querySelectorAll('.book-name')
 
 
 
@@ -36,8 +36,13 @@ async function buscarConteudo() {
 function colocandoConteudo() {
     // FUNÇÃO QUE COLOCA O TITULO E A SINOPSE DO LIVRO SELECIONADO NO HTML
     buscarConteudo().then( (responseObject) => {
-        bookName.innerHTML = responseObject[selectedBookNumber - 1]["livro"];
-        paragraphSynopsis.innerText = responseObject[selectedBookNumber - 1]["sinopse"];
+        bookName.forEach( (name) => {
+            name.innerHTML = responseObject[selectedBookNumber - 1]["livro"];
+        })
+
+        paragraphSynopsis.forEach( (synopsis) => {
+            synopsis.innerText = responseObject[selectedBookNumber - 1]["sinopse"];
+        })
         }
     )
 }
