@@ -163,6 +163,8 @@ main {
   flex-grow: 1;
   padding: 100px 250px 100px 250px;
   transition: 0.2s;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .book-content {
@@ -229,11 +231,11 @@ footer {
 
 
   .chapter {
-    font-size: 5vw;
+    font-size: 1rem;
   }
 
   main {
-    padding: 100px 40px 0px 40px;
+    padding: 100px 40px 100px 40px;
   }
 
   .see-books-button {
