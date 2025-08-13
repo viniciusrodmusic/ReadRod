@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+#book-name-mobile, #synopsis-mobile {
+  display: none;
+}
+
 html,
 body {
   height: 100%;
@@ -169,7 +173,6 @@ header {
 
 
 
-/* SYNOPSIS */
 .div-showing-books {
   position: relative;
   flex: 1;
@@ -177,6 +180,8 @@ header {
   justify-content: center;
 }
 
+/*inclui o "paragraph" com a sinopse em si,
+ e "book-name" com o título do livro*/
 .book-sinopse {
   display: flex;
   flex-direction: column;
@@ -189,7 +194,7 @@ header {
 
 }
 
-
+/*BOOK TITLE*/
 .book-name {
   font-family: "DM Serif Display";
   display: flex;
@@ -200,6 +205,7 @@ header {
   height: 40%;
 }
 
+/*BOOK SYNOPSIS*/
 .paragraph {
   font-size: 1rem;
   text-align: left;
@@ -271,7 +277,20 @@ header {
 
 /* MOBILE */
 @media (max-width: 600px) {
-  .book-sinopse {
+
+  #book-name-mobile, #synopsis-mobile { /*ATIVA O TÍTULO E SINOPSE VERSÃO MOBILE*/
+    display: block;
+    padding: 0;
+    background-color: var(--cinza-azulado-escuro);
+  }
+
+  #synopsis-mobile { /*ELEMENTO QUE TAMBÉM FAZ PARTE DO ".paragraph" */
+    padding: 10px;
+    width: 100%;
+
+  }
+
+  .book-sinopse { /*DESATIVA O TÍTULO E SINOPSE VERSÃO DESKTOP*/
     display: none;
   }
 
@@ -285,24 +304,34 @@ header {
     padding-bottom: 10px;
   }
 
+  .section-livros {
+    height: fit-content;
+  }
+
 
   .div-showing-books {
     flex-direction: column;
+
+
   }
 
   .book-images {
     width: 100%;
     height: 110vw;
-    background-color: var(--cinza-azulado-claro);
     justify-content: center;
   }
 
   .book-name {
     font-size: 5vw;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 20px black;
   }
 
   .paragraph {
-    font-size: 3vw;
+    font-size: 4.5vw;
+    line-height: 7vw;
   }
 
   .covers {
