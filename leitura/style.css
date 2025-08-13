@@ -221,3 +221,25 @@ footer {
   background-color: var(--cinza-azulado-escuro);
   height: 3vh;
 }
+
+
+/*MOBILE*/
+
+@media (max-width: 600px) {
+
+
+  .chapter {
+    font-size: 5vw;
+  }
+
+  main {
+    padding: 100px 40px 0px 40px;
+  }
+
+  .see-books-button {
+    opacity: 0.2!important;
+  }
+
+
+  
+}
