@@ -279,6 +279,18 @@ header {
 /* MOBILE */
 @media (max-width: 600px) {
 
+
+  .div-titulo {
+    padding: 0px 0px 0px 10px;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+ #titulo {
+  width: 100%;
+ }
+
+
   #book-name-mobile, #synopsis-mobile { /*ATIVA O TÍTULO E SINOPSE VERSÃO MOBILE*/
     display: block;
     padding: 0px 20px 0px 20px;
@@ -310,7 +322,7 @@ header {
     display: none;
   }
 
-  .nav-main-page {
+  .div-nav-main-page {
     display: none;
   }
 
