@@ -2,6 +2,10 @@ const nextBookButton = document.getElementById('next-book-button')
 const previousBookButton = document.getElementById('previous-book-button')
 const bookCovers = document.querySelectorAll('.covers')
 const divBookImages = document.querySelectorAll('.book-images')
+const menuIcon = document.querySelector('.menu-icon') // Menu hambúrguer
+const menuToggle = document.querySelector('#menu-toggle')
+const overlayMenuMobile = document.querySelector('.menu-overlay-mobile')
+const linksOverlayMenuMobile = document.querySelectorAll('.mobile-menu-anchor') // Âncoras <a>
 
 
 let availableBooks = bookCovers.length
@@ -21,7 +25,17 @@ let paragraphSynopsis = document.querySelectorAll('.paragraph')
 let bookName = document.querySelectorAll('.book-name')
 
 
+// Menu Hambúrguer (Mobile)
+menuIcon.addEventListener('click', (event) => {
+    overlayMenuMobile.classList.toggle('menu-overlay-mobile-disable')
+})
 
+linksOverlayMenuMobile.forEach( (link) => {
+    link.addEventListener('click', () => {
+        overlayMenuMobile.classList.toggle('menu-overlay-mobile-disable');
+        menuToggle.checked = false;
+    })
+})
 
 
 async function buscarConteudo() {
