@@ -1,5 +1,9 @@
-const nextBookButton = document.getElementById('next-book-button')
-const previousBookButton = document.getElementById('previous-book-button')
+// const nextBookButton = document.getElementById('next-book-button')
+const nextBookButton = document.querySelectorAll('.next-book-button')
+
+// const previousBookButton = document.getElementById('previous-book-button')
+const previousBookButton = document.querySelectorAll('.previous-book-button')
+
 const bookCovers = document.querySelectorAll('.covers')
 const divBookImages = document.querySelectorAll('.book-images')
 const menuIcon = document.querySelector('.menu-icon') // Menu hambúrguer
@@ -73,47 +77,53 @@ colocandoConteudo()
 
     /* BOTÕES PARA PASSAR O LIVRO: ESQUERDA E DIREITA */
     
-previousBookButton.addEventListener('click', () => {
+
+previousBookButton.forEach( button => {
+
+    button.addEventListener('click', () => {
  
-// SE O NÚMERO DO LIVRO SELECIONADO FOR MAIOR QUE 1 (Ou seja algum livro depois do primeiro):
-if (selectedBookNumber > 1) {
-    // REMOVER 1 UNIDADE AO selectedBookNumber
-    selectedBookNumber--
-    console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
-    // CHAMAR A FUNÇÃO
-    changeBook(bookCovers)
-    buttonHidden()
-    colocandoConteudo()
-  
-    // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
-    sessionStorage.setItem('livro-selecionado', selectedBookNumber)
-}
+        // SE O NÚMERO DO LIVRO SELECIONADO FOR MAIOR QUE 1 (Ou seja algum livro depois do primeiro):
+        if (selectedBookNumber > 1) {
+            // REMOVER 1 UNIDADE AO selectedBookNumber
+            selectedBookNumber--
+            console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
+            // CHAMAR A FUNÇÃO
+            changeBook(bookCovers)
+            buttonHidden()
+            colocandoConteudo()
+          
+            // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
+            sessionStorage.setItem('livro-selecionado', selectedBookNumber)
+        }
+        
+        })
+
 
 })
 
 
+nextBookButton.forEach( button => {
 
-nextBookButton.addEventListener('click', () => {
+    button.addEventListener('click', () => {
+        // SE O NÚMERO DO LIVRO SELECIONADO(já começa em 1) FOR MENOR QUE O TOTAL DE LIVROS DISPONÍVEIS:
+        if (selectedBookNumber < availableBooks) {
+            // ADICIONA 1 UNIDADE, AGORA SERÁ O LIVRO 2 E ASSIM POR DIANTE...
+            selectedBookNumber++
+            console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
+
+            changeBook(bookCovers)
+            buttonHidden()
+            colocandoConteudo()
     
-    // SE O NÚMERO DO LIVRO SELECIONADO(já começa em 1) FOR MENOR QUE O TOTAL DE LIVROS DISPONÍVEIS:
-    if (selectedBookNumber < availableBooks) {
+            // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
+            sessionStorage.setItem('livro-selecionado', selectedBookNumber)
+    
+        }    
+            })
 
-        // ADICIONA 1 UNIDADE, AGORA SERÁ O LIVRO 2 E ASSIM POR DIANTE...
-        selectedBookNumber++
-        console.log(` Livros disponíveis: ${availableBooks} \n Livro selecionado: ${selectedBookNumber}`)
 
-        // CHAMAR AS FUNÇÕES
-        changeBook(bookCovers)
-        buttonHidden()
-        colocandoConteudo()
+})
 
-        // ARMAZENA O NÚMERO DO LIVRO SELECIONADO PARA SER USADO NA PÁGINA DE LEITURA
-        sessionStorage.setItem('livro-selecionado', selectedBookNumber)
-
-    }    
-        })
-        
-        
 
 
 
@@ -137,15 +147,24 @@ function buttonHidden() {
     
     // ESCONDE O BOTÃO DA DIREITA SE CHEGAR NO ÚLTIMO LIVRO DISPONÍVEL
     if (selectedBookNumber == availableBooks) {
-        nextBookButton.classList.add("disable")
-    } else if (nextBookButton.classList.contains("disable")) {
-        nextBookButton.classList.remove("disable")
+        nextBookButton.forEach( button => {
+            button.classList.add("disable")
+        })
+    } else if (nextBookButton.forEach( button => {button.classList.contains("disable")})) {
+        nextBookButton.forEach( button => {
+            button.classList.remove("disable")
+        })
     }
     
+    // ESCONDE O BOTÃO DA ESQUERDA SE ESTIVER NO PRIMEIRO LIVRO DISPONÍVEL
     if (selectedBookNumber == 1) {
-        previousBookButton.classList.add('disable')
-    } else if (previousBookButton.classList.contains('disable')) {
-        previousBookButton.classList.remove('disable')
+        previousBookButton.forEach( button => {
+            button.classList.add('disable')
+        })
+    } else if (previousBookButton.forEach( button => {button.classList.contains('disable')}) ) {
+        previousBookButton.forEach( button => {
+            button.classList.remove('disable')
+        })
     }
 }
 // ----------------------------------------------------------------------------------------\\

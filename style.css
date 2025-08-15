@@ -135,14 +135,14 @@ header {
   opacity: 1;
 }
 
-#next-book-button {
+.next-book-button {
   position: absolute;
   right: 7px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-#previous-book-button {
+.previous-book-button {
   position: absolute;
   left: 7px;
   top: 50%;
