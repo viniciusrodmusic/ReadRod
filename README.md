@@ -80,7 +80,7 @@ Atualmente a plataforma inclui:
 ## 📱 Compatibilidade
 
 - **Desktop**: Totalmente funcional
-- **Mobile**: Em desenvolvimento (aviso exibido para dispositivos móveis)
+- **Mobile**: Totalmente funcional
 - **Navegadores**: Chrome, Firefox, Safari, Edge (versões modernas)
 
 ## 👨‍💻 Autor
