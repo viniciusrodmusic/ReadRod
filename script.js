@@ -1,9 +1,5 @@
-// const nextBookButton = document.getElementById('next-book-button')
 const nextBookButton = document.querySelectorAll('.next-book-button')
-
-// const previousBookButton = document.getElementById('previous-book-button')
 const previousBookButton = document.querySelectorAll('.previous-book-button')
-
 const bookCovers = document.querySelectorAll('.covers')
 const divBookImages = document.querySelectorAll('.book-images')
 const menuIcon = document.querySelector('.menu-icon') // Menu hambúrguer
