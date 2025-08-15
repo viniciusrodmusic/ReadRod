@@ -456,9 +456,6 @@ header {
 
 @media (min-width: 601px) and (max-width: 1024px) {
 
-  .div-showing-books {
-  }
-
 .book-name {
   font-size: 3.5vw;
   height: fit-content;
