@@ -147,13 +147,10 @@ function buttonHidden() {
     
     // ESCONDE O BOTÃO DA DIREITA SE CHEGAR NO ÚLTIMO LIVRO DISPONÍVEL
     if (selectedBookNumber == availableBooks) {
-        nextBookButton.forEach( button => {
-            button.classList.add("disable")
-        })
-    } else if (nextBookButton.forEach( button => {button.classList.contains("disable")})) {
-        nextBookButton.forEach( button => {
-            button.classList.remove("disable")
-        })
+        nextBookButton.forEach( button => {button.classList.add("disable")} )
+
+    } else {
+        nextBookButton.forEach( button => {button.classList.remove("disable")} )
     }
     
     // ESCONDE O BOTÃO DA ESQUERDA SE ESTIVER NO PRIMEIRO LIVRO DISPONÍVEL
@@ -161,7 +158,7 @@ function buttonHidden() {
         previousBookButton.forEach( button => {
             button.classList.add('disable')
         })
-    } else if (previousBookButton.forEach( button => {button.classList.contains('disable')}) ) {
+    } else {
         previousBookButton.forEach( button => {
             button.classList.remove('disable')
         })
