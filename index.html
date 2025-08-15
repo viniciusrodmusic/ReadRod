@@ -19,6 +19,18 @@
 <body>
 
 
+  <section class="menu-overlay-mobile menu-overlay-mobile-disable">
+
+      
+            <nav class="nav-main-page">
+                <ul class="nav-list">
+                    <li><a href="#section-livros" id="livros" class="mobile-menu-anchor">Livros</a></li>
+                    <li><a id="textos" class="mobile-menu-anchor">Textos</a></li>
+                    <li><a id="autor" class="mobile-menu-anchor">Autor</a></li>
+                </ul>
+            </nav>
+    </section>
+
     
     <header>
        
@@ -39,21 +51,32 @@
             </nav>
         </div>
 
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- MENU HAMBÚRGUER - MOBILE-->
+        <label for="menu-toggle" class="menu-icon">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+        </label>
+
+
 
     </header>
 
 
 
 
-
+  
 
 
 
 
     <main>
 
+
         <!-- SEÇÃO DOS LIVROS-->
-        <section class="section-livros">
+        <section class="section-livros" id="section-livros">
 
 
             <div class="div-livros-title">
@@ -87,13 +110,23 @@
                     <img class="selected-book covers" src="./images/capa-livro1.jpg">
                     <img class="covers" src="./images/capa-livro2.jpg">
                     
-                    
+                    <!-- BOTÕES PARA TROCAR DE LIVRO NO MOBILE -->
+                <i class="fa-solid fa-square-caret-right see-books-button mobile-arrow previous-book-button disable"></i>
+                <i class="fa-solid fa-square-caret-right see-books-button mobile-arrow next-book-button"></i>
+
                 </div>
 
 
-                <!-- BOTÕES PARA TROCAR DE LIVRO -->
-                <i class="fa-solid fa-square-caret-right see-books-button disable" id="previous-book-button"></i>
-                <i class="fa-solid fa-square-caret-right see-books-button" id="next-book-button"></i>
+                <!-- ATENÇÃO, ELEMENTOS PRO MOBILE:  -->
+                    <h3 class="book-name" id="book-name-mobile"></h3>
+                    <p class="paragraph" id="synopsis-mobile"></p>
+              
+
+
+
+                <!-- BOTÕES PARA TROCAR DE LIVRO NO DESKTOP-->
+                <i class="fa-solid fa-square-caret-right see-books-button previous-book-button disable"></i>
+                <i class="fa-solid fa-square-caret-right see-books-button next-book-button"></i>
 
 
             </div>
@@ -104,19 +137,10 @@
 
 
 
-
-        <!-- <section class="section-textos">
-           
-
-
-        </section> -->
-
     </main>
 
-    <h2 class="mobile-message">AINDA NÃO DISPONÍVEL NESTA RESOLUÇÃO/TAMANHO</h2>
 
     <footer>
-
 
     </footer>
 
