@@ -456,6 +456,10 @@ header {
 
 @media (min-width: 601px) and (max-width: 1024px) {
 
+  .section-livros {
+    height: 150vh;
+  }
+
 .book-name {
   font-size: 3.5vw;
   height: fit-content;
