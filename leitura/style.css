@@ -161,7 +161,7 @@ CHANGE PAGE THEME BUTTON
 main {
   background-color: var(--branco-pagina);
   flex-grow: 1;
-  padding: 100px 250px 100px 250px;
+  padding: 100px 250px;
   transition: 0.2s;
   width: 100%;
   overflow-x: hidden;
@@ -199,14 +199,14 @@ main {
 
 #next-book-button {
   position: fixed;
-  right: 7px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 #previous-book-button {
   position: fixed;
-  left: 7px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%) scaleX(-1);
 }
