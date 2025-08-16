@@ -93,7 +93,14 @@ colocandoConteudo()
 // ADICIONANDO EVENTO AOS BOTÕES LEFT/RIGHT, PARA QUE O LEITOR POSSA TROCAR AS PÁGINAS
 // REUTILIZEI OS BOTÕES DE TROCAR LIVRO DA PÁGINA PRINCIPAL
 
+function scrollBack() {
 
+    main.scrollTo({
+        top: 0,
+        behavior: "instant"
+    })
+
+}
 
 function buttonHidden() {
     
@@ -121,6 +128,7 @@ nextChapterButton.addEventListener('click', (event) => {
         selectedChapter++;
         buttonHidden();
         colocandoConteudo();
+        scrollBack();
     }
    
 })
@@ -130,6 +138,7 @@ previousChapterButton.addEventListener('click', (event) => {
         selectedChapter--;
         colocandoConteudo();
         buttonHidden();
+        scrollBack();
     }
 })
 
@@ -150,3 +159,4 @@ themeButton.addEventListener('click', (event) => {
 })
 
 //
+
