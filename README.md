@@ -31,7 +31,7 @@ ReadRod/
 
 ## 🌐 Acesso Online (deploy)
 
-[![Netlify](https://readrod.netlify.app)](https://readrod.netlify.app)
+[![Netlify](www.readrod.online)](www.readrod.online)
 
 ## 🛠️ Execução Local (Para Desenvolvedores)
 
