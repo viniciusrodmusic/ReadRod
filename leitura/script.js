@@ -14,6 +14,8 @@ const themeButton = document.querySelector('.theme-button')
 const themeIcon = document.querySelector('.theme-icon')
 const main = document.querySelector('main')
 
+const menuCheckBox = document.getElementById('menu-toggle')
+
 let selectedBook = sessionStorage.getItem("livro-selecionado")
 let selectedChapter = 1
 
@@ -22,6 +24,13 @@ let changeFontSize = 1 // 1rem
 // ESCONDE/EXIBE O MENU HAMBÚRGUER
 menuIcon.addEventListener('click', (e) => {
     overlay.classList.toggle('overlay-disable')
+})
+
+bookContent.addEventListener('click', (e) => {
+    if (!overlay.classList.contains('overlay-disable')) {
+        overlay.classList.add('overlay-disable');
+        menuCheckBox.checked = false;
+    }
 })
 
 // AUMENTA/DIMINUI LETRA
