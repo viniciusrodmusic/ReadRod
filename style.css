@@ -284,6 +284,36 @@ header {
 
 
 
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  align-items: center;
+  background-color: var(--cinza-azulado-escuro);
+  min-height: 5rem;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer a {
+  color: #ccc
+}
+
+footer a:hover {
+  color: var(--azul-claro);
+}
+
+footer i {
+  color: rgb(255, 185, 208);
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
 
